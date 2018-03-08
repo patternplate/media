@@ -1,0 +1,22 @@
+{
+  "name": "patternplate-media",
+  "description": "Publishing repository for shared web assets",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "yarn optimize:images",
+    "optimize:images": "imagemin \"src/images/**/*\" --out-dir=docs/images"
+  },
+  "author": {
+    "name": "Mario Nebl",
+    "email": "mario.nebl@sinnerschrader.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "patternplate/patternplate"
+  },
+  "devDependencies": {
+    "imagemin-cli": "^3.0.0"
+  }
+}
