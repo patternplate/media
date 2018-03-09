@@ -6,7 +6,14 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "yarn optimize:images",
-    "optimize:images": "imagemin \"src/images/**/*\" --out-dir=docs/images"
+    "optimize:images": "imagemin \"src/images/**/*\" --out-dir=docs/images",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/images/**": [
+      "imagemin --out-dir=docs/images",
+      "git add docs/images"
+    ]
   },
   "author": {
     "name": "Mario Nebl",
@@ -17,6 +24,8 @@
     "url": "patternplate/patternplate"
   },
   "devDependencies": {
-    "imagemin-cli": "^3.0.0"
+    "husky": "^0.14.3",
+    "imagemin-cli": "^3.0.0",
+    "lint-staged": "^7.0.0"
   }
 }
