@@ -23,25 +23,11 @@ yarn
 ### Add a new asset
 
 * Place your image in `src/images`, e.g. `src/images/hello-word.png`
-
-* Execute `yarn build`
-
-  ```bash
-  λ yarn build
-  yarn run v1.5.1
-  $ yarn optimize:images
-  $ imagemin "src/images/**/*" --out-dir=docs/images
-  1 image minified
-  ✨  Done in 3.68s.
-  ```
-
-* You can see the result at `docs/images/hello-world.png`
-
-* Add, commit and push the changes in `docs` and `src`
+* Add, commit and push the changes in `src`
+  A `husky` precommit hook will take care of image optimization for you.
 
   ```bash
   git add src/images/hello-world.png
-  git add docs/images/hello-world.png
   git commit -m "Add hello-world image"
   git push
   ```
