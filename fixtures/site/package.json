@@ -1,0 +1,8 @@
+{
+  "name": "site",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "@patternplate/render-default": "^2.0.0-69"
+  }
+}
