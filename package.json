@@ -7,20 +7,23 @@
   "scripts": {
     "build": "yarn optimize:images",
     "optimize:images": "imagemin \"src/images/**/*\" --out-dir=docs/images",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "screenshot:site": "patternplate-screenshot --url='http://localhost:1337/' --out='src/images/screenshot-site.svg'",
+    "screenshot:getting-started": "patternplate-screenshot --url='http://localhost:1337/' --out='src/images/screenshot-hello-world.svg'",
+    "screenshot:button": "patternplate-screenshot --url='http://localhost:1337/pattern/button?components-enabled=true' --view-box='0 0 400 240' --no-width --out src/images/screenshot-button.svg"
   },
   "lint-staged": {
     "src/images/**/*.{png,gif}": [
       "imagemin --out-dir=docs/images",
-      "git add"
+      "git add docs"
     ],
     "src/images/**/*.svg": [
       "node ./copy-file --out-dir=docs/images",
-      "git add"
+      "git add docs"
     ],
     "src/logo/**/*": [
       "node ./copy-file --out-dir=docs/logo",
-      "git add"
+      "git add docs"
     ]
   },
   "author": {
@@ -33,6 +36,9 @@
   },
   "devDependencies": {
     "@marionebl/sander": "^0.6.1",
+    "@patternplate/cli": "^2.0.0-71",
+    "@patternplate/render-default": "^2.0.0-71",
+    "@patternplate/screenshot": "^2.0.0-71",
     "husky": "^0.14.3",
     "imagemin-cli": "^3.0.0",
     "lint-staged": "^7.0.0",
