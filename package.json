@@ -12,7 +12,9 @@
     "screenshot:getting-started": "patternplate-screenshot --url='http://localhost:1337/?screenshot=true' --out='src/images/screenshot-hello-world.svg'",
     "screenshot:button": "patternplate-screenshot --url='http://localhost:1337/pattern/button?components-enabled=true&screenshot=true' --view-box='0 0 400 240' --no-width --out src/images/screenshot-button.svg",
     "screenshot:button-markup": "patternplate-screenshot --url='http://localhost:1337/pattern/button?components-enabled=true&screenshot=true' --view-box='0 0 500 240' --no-width --out src/images/screenshot-button-markup.svg",
-    "screenshot:button-styled": "patternplate-screenshot --url='http://localhost:1337/pattern/button?components-enabled=true&screenshot=true' --view-box='0 0 500 240' --no-width --out src/images/screenshot-button-styled.svg"
+    "screenshot:button-styled": "patternplate-screenshot --url='http://localhost:1337/pattern/button?components-enabled=true&screenshot=true' --view-box='0 0 500 240' --no-width --out src/images/screenshot-button-styled.svg",
+    "screenshot:documentation": "patternplate-screenshot --url='http://localhost:1337/pattern/hello-world?components-enabled=true&screenshot=true#behaviour' --view-box='0 300 1024 800' --out src/images/screenshot-doc-pattern-markdown.svg",
+    "screenshot:documentation-pattern-json": "patternplate-screenshot --url='http://localhost:1337/pattern/hello-world?components-enabled=true&screenshot=true#behaviour' --view-box='0 300 1024 800' --out src/images/screenshot-doc-pattern-json.svg"
   },
   "lint-staged": {
     "src/images/**/*.{png,gif}": [
