@@ -1,0 +1,11 @@
+{
+  "name": "hello-world",
+  "version": "2.0.0",
+  "tags": [
+    "Getting Started"
+  ],
+  "patternplate": {
+    "flag": "stable",
+    "displayName": "Hello World"
+  }
+}

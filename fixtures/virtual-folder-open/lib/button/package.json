@@ -1,0 +1,8 @@
+{
+  "name": "button",
+  "version": "1.0.0",
+  "tags": ["hello", "world", "interaction"],
+  "patternplate": {
+    "displayName": "Button"
+  }
+}

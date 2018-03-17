@@ -1,12 +1,6 @@
 > Publishing repository for shared web assets
 
-## patternplate-media
-
-This repository contains a minimal setup to create
-optimized versions of your web assets. 
-
-It picks up assets from `src/` and places size-optimized copies
-in `docs/`. 
+## patternplate-media 
 
 The `docs/` directory is served by GitHub Pages at [patternplate.github.io/media](https://patternplate.github.io/media)
 
@@ -20,31 +14,31 @@ yarn
 
 ## How to
 
-### Add a new asset
+### Create a new screenshot
 
-* Place your image in `src/images`, e.g. `src/images/hello-word.png`
-* Add, commit and push the changes in `src`
-  A `husky` precommit hook will take care of image optimization for you.
+1. Create a fixture folder e.g. via `npx create-patternplate --out=fixtures/my`
+2. Create a `screenshot.config.js`. 
+3. Execute `yarn shoot my`
+4. Result is saved at `docs/images/my.svg`
 
-  ```bash
-  git add src/images/hello-world.png
-  git commit -m "Add hello-world image"
-  git push
-  ```
+## Screenshot config
 
-* After pushing the image will be available at [images/hello-world.png](https://patternplate.github.io/media/images/hello-world.png)
-
-### Remove an asset
-
-* Remove the asset from `src/images` and `docs/images`
-
-* Add, commit and push the changes in `docs` and `src`
-
-  ```bash
-  git rm src/images/hello-world.png
-  git add docs/images/hello-world.png
-  git commit -m "Remove hello-world image"
-  git push
-  ```
-
-* After pushing the image will no longer be available
+```js
+module.exports = {
+  // Node.js URL object. Screenshot will be taken from this address
+  // Reserved: host, hostname, port, protocol
+  url: {
+    hash: "hash",
+    query: {
+      key: "value"
+    },
+    pathname: "some/path"
+  },
+  svg: {
+    outWidth: 800, // width attr of result svg,
+    outHeight: 600, // height attr or result svg
+    viewBox: "0 0 800 600", // viewBox of result svg
+    preserveAspectRatio: "minXminY meet"
+  } 
+};
+```

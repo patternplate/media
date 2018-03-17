@@ -1,0 +1,8 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "tags": ["hello", "world", "typography"],
+  "patternplate": {
+    "displayName": "Hello World"
+  }
+}
