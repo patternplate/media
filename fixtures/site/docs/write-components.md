@@ -1,4 +1,5 @@
 ---
 displayName: How to write components
-order: 3
+options:
+  order: 5
 ---

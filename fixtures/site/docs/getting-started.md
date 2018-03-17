@@ -1,7 +1,7 @@
 ---
 displayName: Getting started
 options:
-  order: -1
+  order: 2
 ---
 
 # :runner: Getting started 

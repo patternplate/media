@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "@marionebl/sander": "^0.6.1",
-    "@patternplate/cli": "^2.0.0-78",
-    "@patternplate/render-default": "^2.0.0-78",
-    "@patternplate/screenshot": "^2.0.0-78",
+    "@patternplate/cli": "^2.0.0-79",
+    "@patternplate/render-default": "^2.0.0-79",
+    "@patternplate/screenshot": "^2.0.0-79",
     "dargs": "^5.1.0",
     "esm": "^3.0.6",
     "execa": "^0.10.0",

@@ -1,4 +1,5 @@
 ---
 displayName: How to use the Design System
-order: 2
+options: 
+  order: 3
 ---

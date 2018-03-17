@@ -1,6 +1,7 @@
 ---
 displayName: Platon Tokens
-options: 
-    order: 10
-    query: tags=token
+options:
+  order: 7
+  query: tags=token
 ---
+
