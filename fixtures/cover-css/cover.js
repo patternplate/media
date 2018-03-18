@@ -6,7 +6,7 @@
           top: 50%;
           left: 50%;
           max-width: 30ch;
-          transform: translate(-50%, -50);
+          transform: translate(-50%, -50%);
           font-family: Helvetica, Arial, sans-serif;
         }
       `;
