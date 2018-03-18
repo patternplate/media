@@ -30,7 +30,8 @@ Promise.all(entries.map(async entry => {
       "--out", path.join(config.outputDirectory, `screenshot-${entry}.svg`),
       flags.serve ? "--serve" : null,
       ...(flags.ppBin ? ["--pp-bin", flags.ppBin] : []),
-      ...(flags.psBin ? ["--ps-bin", flags.psBin] : [])
+      ...(flags.psBin ? ["--ps-bin", flags.psBin] : []),
+      ...(flags.open ? ["--open", typeof flags.open == "string" ? flags.open : null]: [])
     ].filter(Boolean), {stdio: "inherit"})
   } catch (err) {
     console.error(err);

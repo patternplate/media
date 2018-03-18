@@ -10,6 +10,7 @@ import dargs from "dargs";
 import tempy from "tempy";
 import express from "express";
 import http from "http";
+import opn from "opn";
 
 async function main(cli) {
   const config = await getConfig({cwd: cli.flags.in});
@@ -37,7 +38,16 @@ async function main(cli) {
   if (!cli.flags.serve) {
     server.server.close();
   } else {
-    console.log(url);
+    if (cli.flags.open) {
+      const args = typeof cli.flags.open === "string" ? {app: cli.flags.open, wait: false} : {wait: false};
+      await opn(url, args);
+      return;
+    }
+  }
+
+  if (cli.flags.open) {
+    const args = typeof cli.flags.open === "string" ? {app: cli.flags.open, wait: false} : {wait: false};
+    await opn(cli.flags.out, args);
   }
 }
 
