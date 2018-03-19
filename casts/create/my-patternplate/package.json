@@ -1,0 +1,11 @@
+{
+  "name": "my-patternplate",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "patternplate start"
+  },
+  "devDependencies": {
+    "@patternplate/cli": "^2.0.0-79"
+  }
+}
