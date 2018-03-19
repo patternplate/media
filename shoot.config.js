@@ -1,4 +1,4 @@
 module.exports = {
-  inputDirectory: "fixtures",
+  inputDirectory: "shots",
   outputDirectory: "docs/images"
 };

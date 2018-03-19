@@ -1,0 +1,17 @@
+{
+  "name": "@casts/build",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "patternplate": "../../node_modules/.bin/patternplate"
+  },
+  "author": {
+    "name": "Mario Nebl",
+    "email": "mario.nebl@sinnerschrader.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "patternplate/patternplate"
+  }
+}

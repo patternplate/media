@@ -7,7 +7,8 @@
   "scripts": {
     "build": "yarn optimize:images",
     "optimize:images": "imagemin \"src/images/**/*\" --out-dir=docs/images",
-    "shoot": "node bin/shoot"
+    "shoot": "node bin/shoot",
+    "cast": "node bin/cast"
   },
   "author": {
     "name": "Mario Nebl",
@@ -35,6 +36,7 @@
     "portscanner": "^2.1.1",
     "require-from-string": "^2.0.1",
     "serve": "^6.5.3",
+    "svg-term-cli": "^2.1.1",
     "svgo": "^1.0.5",
     "tempy": "^0.2.1",
     "yargs-parser": "^9.0.2"

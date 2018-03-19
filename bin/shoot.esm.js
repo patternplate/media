@@ -11,7 +11,7 @@ const config = require(path.join(process.cwd(), "shoot.config.js"));
 const bin = path.join(__dirname, "./screenshot.js");
 const pattern = input.length > 0 ? input : ["*"];
 
-const o = {cwd: "./fixtures", expandDirectories: false, onlyDirectories: true};
+const o = {cwd: "./shots", expandDirectories: false, onlyDirectories: true};
 const entries = await globby(pattern, o);
 
 if (entries.length === 0) {
