@@ -11,8 +11,7 @@ module.exports = {
     echo ""
   `,
   transform(svg) {
-    let workingDir = process.cwd() + '/docs/patterns';
-    return svg.split(workingDir).join('docs/patterns/');
+    return svg.split(process.cwd() + '/docs/patterns').join('docs/patterns/');
   },
   term: {
     window: true,
